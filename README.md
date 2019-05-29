@@ -50,4 +50,82 @@ End Sub
     
 # Multiple judgment
 
+ Set vdoc = ThisDocument
+    Set vexcel = New Excel.Application
+    Set vwb = vexcel.Workbooks.Open(ThisDocument.Path & "\iDVP9_3.xlsx")
+    vexcel.Visible = True
+    Set sht = vwb.Worksheets("DVP-1")
+If sht.Range("d17").Value = " " Or "-" Then
+    vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(6, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(7, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(8, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(9, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(10, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(11, 3).Range = sht.Range("c17").Value
+    End If
+If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" Then
+    vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(6, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(7, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(8, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(9, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(10, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(11, 3).Range = sht.Range("d17").Value
+    End If
+If sht.Range("e17").Value <> "" Or "-" Then
+    vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(6, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(7, 3).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(8, 3).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(9, 3).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(10, 3).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(11, 3).Range = sht.Range("e17").Value
+    End If
+If sht.Range("d17").Value = " " Or "-" Then
+    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("c17").Value
+    End If
+If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" Then
+    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("d17").Value
+    End If
+If sht.Range("e17").Value <> "" Or "-" Then
+    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
+    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("d17").Value
+    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("e17").Value
+    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("e17").Value
+    End If
+
    
