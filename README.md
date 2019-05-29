@@ -49,13 +49,14 @@ End Sub
     'section number can be found when click the header,and table number in header is different from the tables in text, it's be renamed , as for header name, you can try to find out. 
     
 # Multiple judgment
-
- Set vdoc = ThisDocument
+    
+    Set vdoc = ThisDocument
     Set vexcel = New Excel.Application
-    Set vwb = vexcel.Workbooks.Open(ThisDocument.Path & "\iDVP9_3.xlsx")
+    Set vwb = vexcel.Workbooks.Open(ThisDocument.Path & "\xxxx.xlsx")
     vexcel.Visible = True
-    Set sht = vwb.Worksheets("DVP-1")
-If sht.Range("d17").Value = " " Or "-" Then
+    Set sht = vwb.Worksheets("xxxx")
+    
+    If sht.Range("d17").Value = " " Or "-" Then
     vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
@@ -67,7 +68,8 @@ If sht.Range("d17").Value = " " Or "-" Then
     vdoc.Tables(6).Cell(10, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(11, 3).Range = sht.Range("c17").Value
     End If
-If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" Then
+    
+    If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" Then
     vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
@@ -79,7 +81,8 @@ If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" The
     vdoc.Tables(6).Cell(10, 3).Range = sht.Range("d17").Value
     vdoc.Tables(6).Cell(11, 3).Range = sht.Range("d17").Value
     End If
-If sht.Range("e17").Value <> "" Or "-" Then
+
+    If sht.Range("e17").Value <> "" Or "-" Then
     vdoc.Tables(6).Cell(2, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(3, 3).Range = sht.Range("c17").Value
     vdoc.Tables(6).Cell(4, 3).Range = sht.Range("c17").Value
@@ -91,41 +94,3 @@ If sht.Range("e17").Value <> "" Or "-" Then
     vdoc.Tables(6).Cell(10, 3).Range = sht.Range("e17").Value
     vdoc.Tables(6).Cell(11, 3).Range = sht.Range("e17").Value
     End If
-If sht.Range("d17").Value = " " Or "-" Then
-    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("c17").Value
-    End If
-If sht.Range("d17").Value <> "" Or "-" & sht.Range("e17").Value = " " Or "-" Then
-    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("d17").Value
-    End If
-If sht.Range("e17").Value <> "" Or "-" Then
-    vdoc.Tables(6).Cell(2, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(3, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(4, 5).Range = sht.Range("c17").Value
-    vdoc.Tables(6).Cell(5, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(6, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(7, 5).Range = sht.Range("d17").Value
-    vdoc.Tables(6).Cell(8, 5).Range = sht.Range("e17").Value
-    vdoc.Tables(6).Cell(9, 5).Range = sht.Range("e17").Value
-    vdoc.Tables(6).Cell(10, 5).Range = sht.Range("e17").Value
-    vdoc.Tables(6).Cell(11, 5).Range = sht.Range("e17").Value
-    End If
-
-   
