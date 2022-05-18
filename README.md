@@ -132,9 +132,9 @@ Insert pictures in batches, format changes with cells, unlock aspect ratio
     End Sub
 
 # Fills the count of the selected ranges in the first cell that is not empty
-Use the CONTA formula
+Use the COUNTA formula
 
-Private Sub CommandButton1_Click()
+    Private Sub CommandButton1_Click()
 
 ' In the certained cell area
 ' When find the first cell without content
