@@ -131,3 +131,49 @@ Insert pictures in batches, format changes with cells, unlock aspect ratio
     Application.ScreenUpdating = True
     End Sub
 
+# Fills the count of the selected ranges in the first cell that is not empty
+Use the CONTA formula
+
+Private Sub CommandButton1_Click()
+
+' In the certained cell area
+' When find the first cell without content
+' Fill in the count of expected cells area with COUNTA formula
+' And the filled value does not change with the change of the selected cells
+
+On Error Resume Next
+
+Dim i, j
+Dim rng As Range
+
+For i = 17 To 22
+If Cells(14, i).Value = "" Then
+Cells(14, i).Select
+ActiveCell.Formula = "=COUNTA(K5:K1048576)" ' fill in the count of expected cells area with COUNTA formula
+Cells(14, i).Select
+    Selection.Copy
+Cells(14, i).Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False ' make the filled value does not change with the change of the selected cells
+Application.CutCopyMode = False ' disable the cutcopymode of selected cell
+Exit For
+End If
+Next
+
+For j = 17 To 22
+If Cells(15, j).Value = "" Then
+Cells(15, j).Select
+ActiveCell.Formula = "=COUNTA(D5:K1048576)"
+Cells(15, j).Select
+    Selection.Copy
+Cells(15, j).Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+Application.CutCopyMode = False
+Exit For
+End If
+ 
+Next
+
+    
+End Sub
